@@ -66,15 +66,15 @@ header {
 /* Aligns the icon image and the text perfectly */
 .logo-container {
   display: flex;
-  align-items: center;
-  gap: 15px; /* Creates clean spacing between the duck and the text */
+  align-items: center; /* Forces text and image to line up perfectly on their horizontal center */
+  gap: 10px; /* Tighter spacing for a smaller icon */
 }
 
 /* Controls the exact size of your beanbag duck icon */
 .icon {
-  width: 10px; /* Perfect size to balance with the text height */
-  height: 10px;
-  object-fit: contain; /* Makes sure the image doesn't get squished */
+  width: 35px; /* Shrunk down so it sits perfectly inline */
+  height: 35px;
+  object-fit: contain; /* Ensures it doesn't distort */
 }
 
 header .logo {
