@@ -56,17 +56,32 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 25px 5%;
+  padding: 15px 5%; /* Slightly adjusted padding for the larger icon */
   position: sticky;
   top: 0;
   z-index: 1000;
   border-bottom: 1px solid #f0e6db;
 }
 
+/* Aligns the icon image and the text perfectly */
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 15px; /* Creates clean spacing between the duck and the text */
+}
+
+/* Controls the exact size of your beanbag duck icon */
+.icon {
+  width: 55px; /* Perfect size to balance with the text height */
+  height: 55px;
+  object-fit: contain; /* Makes sure the image doesn't get squished */
+}
+
 header .logo {
   font-family: "Playfair Display", serif;
-  font-size: 22px;
+  font-size: 24px; /* Matches the elegant layout of your typography */
   font-weight: 600;
+  color: #1a1410;
   letter-spacing: -0.5px;
 }
 
