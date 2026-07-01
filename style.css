@@ -72,8 +72,8 @@ header {
 
 /* Controls the exact size of your beanbag duck icon */
 .icon {
-  width: 35px; /* Shrunk down so it sits perfectly inline */
-  height: 35px;
+  width: 50px; /* Shrunk down so it sits perfectly inline */
+  height: 50px;
   object-fit: contain; /* Ensures it doesn't distort */
 }
 
