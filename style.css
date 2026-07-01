@@ -85,47 +85,33 @@ nav a:hover {
 
 /* --- Hero Section --- */
 .hero {
-  background:
-    linear-gradient(rgba(26, 20, 16, 0.4), rgba(26, 20, 16, 0.45)),
-    url("LazyDuckCoffee.png") no-repeat center center;
-  background-size: contain;
+  background: #ffffff url("LazyDuckCoffee.png") no-repeat center center;
+  background-size: contain; /* Keeps the whole duck logo perfectly visible */
   height: 85vh;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
-  color: #ffffff;
+  color: #1a1410; /* Changed to dark brown so you can read it on the white background */
   padding: 0 20px;
 }
 
 .hero-sub {
-  font-size: 13px;
-  text-transform: uppercase;
-  letter-spacing: 3px;
-  color: #e6dfd5;
-  margin-bottom: 15px;
-  display: block;
-}
-
-.hero h1 {
-  color: #ffffff;
-  font-size: clamp(36px, 6vw, 64px);
-  line-height: 1.2;
-  margin-bottom: 20px;
-}
-
-.hero h1 em {
-  font-family: "Playfair Display", serif;
-  font-style: italic;
-  font-weight: 400;
+  color: #bc9c74; /* Elegant gold for the top tag */
 }
 
 .hero p {
-  font-size: clamp(15px, 2vw, 18px);
-  max-width: 580px;
-  margin: 0 auto 35px auto;
-  color: #f2ede6;
-  font-weight: 300;
+  color: #5c524a; /* Muted dark brown for the paragraph description */
+}
+
+.hero .btn {
+  background-color: #1a1410; /* Dark button so it pops out on the white screen */
+  color: #ffffff;
+}
+
+.hero .btn:hover {
+  background-color: #bc9c74;
+  color: #ffffff;
 }
 
 .btn {
