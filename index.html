@@ -4,89 +4,137 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>The Istara Coffee | Premium Cafe</title>
-    <link rel="stylesheet" href="hundredN1.css" />
+    <!-- Modern Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Link to CSS -->
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <!-- Header & Navigation -->
     <header>
-      <div class="logo">The Istara Coffee</div>
+      <div class="logo">The Istara.</div>
       <nav>
-        <a href="#about">About</a>
+        <a href="#about">Our Story</a>
         <a href="#menu">Menu</a>
-        <a href="#contact">Contact</a>
+        <a href="#contact">Visit</a>
       </nav>
     </header>
 
     <!-- Hero Banner Section -->
     <section class="hero">
       <div class="hero-content">
-        <h1>Served 101% Better</h1>
+        <span class="hero-sub">Welcome to HundredN1</span>
+        <h1>Served <em>101%</em> Better</h1>
         <p>
-          Welcome to HundredN1. Experience carefully roasted beans, crafted
-          passionately by our expert baristas.
+          Experience carefully sourced single-origin beans, roasted with
+          precision and crafted passionately by our expert baristas.
         </p>
-        <a href="#menu" class="btn">View Menu</a>
+        <a href="#menu" class="btn">Explore Menu</a>
       </div>
     </section>
 
     <!-- About Section -->
     <section id="about" class="about">
-      <h2>Our Story</h2>
-      <p>
-        At The Istara Coffee, we believe that a great cup of coffee can
-        transform your entire day. Located in the heart of the city, we source
-        our single-origin beans ethically and roast them to perfection to bring
-        out unique, vibrant flavor profiles.
-      </p>
+      <div class="container-small">
+        <span class="section-tag">Since 2026</span>
+        <h2>Our Story</h2>
+        <p class="lead">
+          At The Istara Coffee, we believe a remarkable cup of coffee has the
+          power to shape your entire day.
+        </p>
+        <p>
+          Located in the heart of the city, we source our specialty beans
+          ethically from sustainable farms. By roasting in small batches, we
+          unlock the vibrant, intricate flavor profiles unique to every harvest.
+        </p>
+      </div>
     </section>
 
     <!-- Menu Section -->
     <section id="menu" class="menu">
-      <h2>Popular Menu</h2>
-      <div class="menu-grid">
-        <div class="menu-item">
-          <h3>Espresso</h3>
-          <p>Rich, bold, and intense concentrated shot of coffee.</p>
-          <span class="price">$3.50</span>
-        </div>
-        <div class="menu-item">
-          <h3>Cafe Latte</h3>
-          <p>Smooth espresso balanced with perfectly steamed silky milk.</p>
-          <span class="price">$4.50</span>
-        </div>
-        <div class="menu-item">
-          <h3>Caramel Macchiato</h3>
-          <p>Fresh espresso with creamy milk and a sweet drizzle of caramel.</p>
-          <span class="price">$5.00</span>
-        </div>
-        <div class="menu-item">
-          <h3>Croissant</h3>
-          <p>Flaky, buttery, freshly baked golden pastry.</p>
-          <span class="price">$4.00</span>
+      <div class="container">
+        <span class="section-tag">Curated Flavors</span>
+        <h2>Popular Menu</h2>
+
+        <div class="menu-grid">
+          <div class="menu-item">
+            <div class="menu-item-header">
+              <h3>Espresso</h3>
+              <span class="price">$3.50</span>
+            </div>
+            <p>
+              Rich, bold, and intense concentrated shot of our signature
+              seasonal blend.
+            </p>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-header">
+              <h3>Cafe Latte</h3>
+              <span class="price">$4.50</span>
+            </div>
+            <p>
+              Smooth espresso balanced beautifully with perfectly texturized
+              silky milk.
+            </p>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-header">
+              <h3>Caramel Macchiato</h3>
+              <span class="price">$5.00</span>
+            </div>
+            <p>
+              Fresh espresso over creamy steamed milk, finished with a
+              house-made caramel drizzle.
+            </p>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-header">
+              <h3>Butter Croissant</h3>
+              <span class="price">$4.00</span>
+            </div>
+            <p>
+              Flaky, multi-layered, freshly baked French pastry served warm with
+              butter.
+            </p>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- Contact & Hours Section -->
     <section id="contact" class="contact">
-      <h2>Visit Us</h2>
-      <div class="contact-container">
-        <div class="hours">
-          <h3>Opening Hours</h3>
-          <p><strong>Monday - Friday:</strong> 7:00 AM - 6:00 PM</p>
-          <p><strong>Saturday - Sunday:</strong> 8:00 AM - 8:00 PM</p>
-        </div>
-        <div class="location">
-          <h3>Our Location</h3>
-          <p>101 Coffee Lane, Suite N1</p>
-          <p>Email: hello@hundredn1.com</p>
+      <div class="container">
+        <div class="contact-grid">
+          <div class="contact-card">
+            <h3>Opening Hours</h3>
+            <div class="hours-row">
+              <span>Monday — Friday</span>
+              <span>7:00 AM - 6:00 PM</span>
+            </div>
+            <div class="hours-row">
+              <span>Saturday — Sunday</span>
+              <span>8:00 AM - 8:00 PM</span>
+            </div>
+          </div>
+          <div class="contact-card">
+            <h3>Our Space</h3>
+            <p class="address">101 Coffee Lane, Suite N1</p>
+            <p class="email">hello@hundredn1.com</p>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- Footer -->
     <footer>
-      <p>&copy; 2026 The Istara Coffee. All rights reserved.</p>
+      <p>
+        &copy; 2026 The Istara Coffee. Cultivating community through coffee.
+      </p>
     </footer>
   </body>
 </html>
