@@ -87,7 +87,8 @@ nav a:hover {
 .hero {
   background:
     linear-gradient(rgba(26, 20, 16, 0.4), rgba(26, 20, 16, 0.45)),
-    url("hundredN1.github.io/LazyDuckCoffee.png") no-repeat center center/cover;
+    url("LazyDuckCoffee.png") no-repeat center center;
+  background-size: contain;
   height: 85vh;
   display: flex;
   justify-content: center;
