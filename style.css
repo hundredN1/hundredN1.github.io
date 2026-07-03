@@ -161,18 +161,18 @@ nav a:hover {
   color: white;
 }
 
-/* --- About Section --- */
-.about {
+/* --- Ordering Guide Section --- */
+.guide {
   padding: 100px 0;
   text-align: center;
 }
 
-.about h2 {
+.guide h2 {
   font-size: 36px;
   margin-bottom: 30px;
 }
 
-.about .lead {
+.guide .lead {
   font-size: 20px;
   font-family: "Playfair Display", serif;
   color: #5c524a;
@@ -181,10 +181,30 @@ nav a:hover {
   line-height: 1.5;
 }
 
-.about p:not(.lead) {
+.guide p:not(.lead) {
   font-size: 15px;
   color: #6e6258;
   font-weight: 300;
+}
+
+/* --- Ordering Button --- */
+
+.orderbtn1 {
+  display: block;
+  margin: 20px auto 0 auto; /* Centers the button under the text */
+  padding: 12px 24px;
+  background-color: #00704a; /* You can change this to match your cafe's theme color */
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.orderbtn1:hover {
+  background-color: #005438; /* Darkens slightly when the customer hovers their mouse */
 }
 
 /* --- Menu Section --- */
