@@ -21,12 +21,159 @@
         <img src="logo.png" class="icon" alt="Lazy Duck Logo Icon" />
         <span class="logo">Lazy Duck Coffee</span>
       </div>
-      <nav>
+      <nav style="display: flex; align-items: center">
         <a href="#guide">How to Order</a>
         <a href="#menu">Menu</a>
         <a href="#contact">Visit</a>
+        <!-- Modern Shopping Cart Button -->
+        <button
+          id="cartToggleBtn"
+          style="
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            color: #5c524a;
+            margin-left: 30px;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+          "
+        >
+          🛒 Cart (<span id="navCartCount">0</span>)
+        </button>
       </nav>
     </header>
+
+    <!-- Slide-out Cart Panel (Hidden by default) -->
+    <div
+      id="cartDrawer"
+      style="
+        position: fixed;
+        top: 0;
+        right: -400px;
+        width: 100%;
+        max-width: 400px;
+        height: 100vh;
+        background: #faf8f5;
+        box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+        z-index: 2000;
+        transition: right 0.3s ease;
+        display: flex;
+        flex-direction: column;
+        padding: 30px;
+      "
+    >
+      <!-- Cart Header with Close Button -->
+      <div
+        style="
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          border-bottom: 1px solid #f0e6db;
+          padding-bottom: 15px;
+          margin-bottom: 20px;
+        "
+      >
+        <h2 style="font-size: 24px; margin: 0">Your Cart</h2>
+        <button
+          id="closeCartBtn"
+          style="
+            background: none;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+            color: #8a8077;
+          "
+        >
+          &times;
+        </button>
+      </div>
+
+      <!-- Scrollable Cart Items Container -->
+      <div
+        id="cart-items"
+        style="flex: 1; overflow-y: auto; margin-bottom: 20px"
+      >
+        <p style="color: #8a8077; font-style: italic">
+          Your cart is empty. Add items from the menu!
+        </p>
+      </div>
+
+      <!-- Grand Total -->
+      <div
+        style="
+          border-top: 1px solid #f0e6db;
+          padding-top: 15px;
+          margin-bottom: 20px;
+          display: flex;
+          justify-content: space-between;
+          font-weight: bold;
+          font-size: 18px;
+        "
+      >
+        <span>Grand Total:</span>
+        <span id="cart-total">RM 0</span>
+      </div>
+
+      <!-- Guest Checkout Form Fields -->
+      <div
+        class="contact-card"
+        style="padding: 0; border: none; background: none; text-align: left"
+      >
+        <div style="margin-bottom: 12px">
+          <input
+            type="text"
+            id="custName"
+            placeholder="Your Name"
+            style="
+              width: 100%;
+              padding: 10px;
+              border: 1px solid #decbba;
+              border-radius: 4px;
+            "
+            required
+          />
+        </div>
+        <div style="margin-bottom: 15px">
+          <input
+            type="text"
+            id="custTable"
+            placeholder="Table Number / Dine-in or Takeaway"
+            style="
+              width: 100%;
+              padding: 10px;
+              border: 1px solid #decbba;
+              border-radius: 4px;
+            "
+            required
+          />
+        </div>
+        <button
+          id="whatsappCheckoutBtn"
+          class="orderbtn1"
+          style="width: 100%; margin: 0; padding: 14px"
+        >
+          Send Order to WhatsApp
+        </button>
+      </div>
+    </div>
+
+    <!-- Backdrop overlay to darken background when cart is open -->
+    <div
+      id="cartOverlay"
+      style="
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.4);
+        z-index: 1999;
+        display: none;
+      "
+    ></div>
 
     <!-- Hero Banner Section -->
     <section class="hero">
@@ -64,6 +211,7 @@
         <h2>Popular Menu</h2>
 
         <div class="menu-grid">
+          <!-- Espresso Card -->
           <div class="menu-item">
             <div class="menu-item-header">
               <h3>Espresso</h3>
@@ -73,7 +221,16 @@
               Rich, bold, and intense concentrated shot of our signature
               seasonal blend.
             </p>
+            <button
+              class="btn"
+              style="padding: 6px 16px; font-size: 11px; margin-top: 15px"
+              onclick="addToCart('Espresso', 6)"
+            >
+              + Add to Cart
+            </button>
           </div>
+
+          <!-- Cafe Latte Card -->
           <div class="menu-item">
             <div class="menu-item-header">
               <h3>Cafe Latte</h3>
@@ -83,7 +240,16 @@
               Smooth espresso balanced beautifully with perfectly texturized
               silky milk.
             </p>
+            <button
+              class="btn"
+              style="padding: 6px 16px; font-size: 11px; margin-top: 15px"
+              onclick="addToCart('Cafe Latte', 12)"
+            >
+              + Add to Cart
+            </button>
           </div>
+
+          <!-- Caramel Macchiato Card -->
           <div class="menu-item">
             <div class="menu-item-header">
               <h3>Caramel Macchiato</h3>
@@ -93,7 +259,16 @@
               Fresh espresso over creamy steamed milk, finished with a
               house-made caramel drizzle.
             </p>
+            <button
+              class="btn"
+              style="padding: 6px 16px; font-size: 11px; margin-top: 15px"
+              onclick="addToCart('Caramel Macchiato', 15)"
+            >
+              + Add to Cart
+            </button>
           </div>
+
+          <!-- Butter Croissant Card -->
           <div class="menu-item">
             <div class="menu-item-header">
               <h3>Butter Croissant</h3>
@@ -103,6 +278,13 @@
               Flaky, multi-layered, freshly baked French pastry served warm with
               butter.
             </p>
+            <button
+              class="btn"
+              style="padding: 6px 16px; font-size: 11px; margin-top: 15px"
+              onclick="addToCart('Butter Croissant', 8)"
+            >
+              + Add to Cart
+            </button>
           </div>
         </div>
       </div>
