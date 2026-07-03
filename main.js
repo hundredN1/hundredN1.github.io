@@ -102,7 +102,7 @@ window.addEventListener("DOMContentLoaded", () => {
       message += `\n💰 *Total Amount:* RM ${total}\n\n`;
       message += `Please reply with the payment QR code to confirm!`;
 
-      const businessPhoneNumber = "60123456789"; // ⚠️ Replace with your WhatsApp number
+      const businessPhoneNumber = "60125613468";
       const whatsappUrl = `https://wa.me/${businessPhoneNumber}?text=${encodeURIComponent(message)}`;
 
       window.open(whatsappUrl, "_blank");
